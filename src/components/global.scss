@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // font-family: Roboto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .favorites {
+        background-color: rgb(214, 227, 241);
+
+        width: 30%;
+        position: relative;
+        border: 1px solid black;
+        padding: 20px;
+        height: fit-content;
+        input {
+            width: 100%;
+            height: 30px;
+            padding-left: 10px;
+            margin-top: 10px;
+            outline: none;
+        }
+        .fav-foot {
+            display: flex;
+            justify-content: space-between;
+            p {
+                width: 80%;
+                margin-top: 5px;
+            }
+            .remove-movie {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                width: 23px;
+                height: 23px;
+                opacity: 0.8;
+                padding: 4px;
+                cursor: pointer;
+                margin: 5px 0;
+                margin-top: 10px;
+            }
+        }
+        .favorites-save {
+            width: 50%;
+            height: 30px;
+            background-color: #496ddb;
+            border: 0;
+            color: white;
+            margin-top: 20px;
+            transition: 1s;
+            &:hover {
+                opacity: 0.8;
+                cursor: pointer;
+            }
+        }
+    }
+    .navbar {
+        
+        width: 100%;
+        height: 100px;
+        background: blue;
+        display: flex;
+        justify-content: space-around;
+        p {
+            font-size: 50px;
+            color: white;
+            &:last-child {
+                width: 30px;
+                display: none;
+            }
+        }
+        
+    }
+    .footer {
+        justify-content: space-evenly;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        .left {
+            width: 44%;
+            display: flex;
+            flex-direction: column;
+            .searchDiv {
+                margin-bottom: 10px;
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    div {
+                        display: flex;
+                        input {
+                            height: 30px;
+                            width: 300px;
+                            outline: none;
+                            padding-left: 10px;
+                            border: 0.7px solid black;
+                            border-radius: 3px;
+                        }
+                        button {
+                            height: 30px;
+                            margin-left: 10px;
+                            border-radius: 0;
+                            outline: none;
+                            color: white;
+                            background-color: black;
+                            border: 0;
+                            padding: 10px;
+                            align-items: center;
+                            justify-content: center;
+                            display: flex;
+                            transition: all 0.7s;
+                            &:hover {
+                                color: rgb(0, 0, 0);
+                                background-color: #ffeedb;
+                            }
+                        }
+                    }
+                    p {
+                        font-size: 12px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+            .movies {
+                .listitem {
+                    display: flex;
+                    margin: 20px;
+                    margin-left: 0;
+                    background-color: #ffeedb;
+                    padding: 20px;
+                    padding-right: 0;
+                    width: 100%;
+                    img {
+                        width: 100px;
+                        height: 140px;
+                    }
+                    .iteminfo {
+                        padding: 20px;
+                        padding-right: 10px;
+                        padding-top: 0;
+                        p {
+                            font-size: 21px;
+                            font-weight: 500;
+                        }
+                        button {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 160px;
+                            height: 35px;
+                            outline: navajowhite;
+                            background-color: #496ddb;
+                            color: white;
+                            border: 0;
+                            font-size: 14px;
+                            transition: all 2s;
+                            padding: 10px 15px;
+                            margin-top: 10px;
+                            cursor: pointer;
+                            &:hover {
+                                opacity: 0.8;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+.posAb {
+    display: block;
+}
+@media  (max-width:768px) {
+    .container{
+        .footer{
+            .left{
+                width: 80%;
+                
+            }
+        }
+        .favorites{
+            display: none;
+            min-width: 350px;
+        }
+        .navbar{
+            p{
+                &:last-child{
+                    display: block;
+                }
+            }
+        }
+        .movies{
+            min-width: 350px;
+            .listitem{
+                p{
+                    font-size: 14px!important;
+                }
+            }
+            button{
+                width: 130px!important;
+                font-size: 11px!important;
+            }
+        }
+    }
+    .posAb {
+        position: fixed !important;
+        display: block !important;
+        background-color: rgb(214, 227, 241);
+        width: 90%!important;
+        bottom: 0;
+    }
+    
+}
