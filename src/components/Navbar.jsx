@@ -11,7 +11,7 @@ const Navbar = ({FavVis,setFavVis}) => {
     <>
     
     <div className={"navbar"}>
-      <p>ALL-MOVIES</p>
+      <p>Films</p>
       <p onClick={xCLick} >X</p>
     </div>
     </>
